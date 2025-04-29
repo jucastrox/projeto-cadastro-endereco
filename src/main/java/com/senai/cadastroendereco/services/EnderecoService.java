@@ -14,23 +14,23 @@ public class EnderecoService {
 
     @Autowired
     private EnderecoRepository enderecoRepository;
-    
-    //Salvar um novo endereço
-    public Endereco salvar (Endereco endereco) {
+
+    // Salvar um novo endereço
+    public Endereco salvar(Endereco endereco) {
         return enderecoRepository.save(endereco);
     }
-    
-    //Buscar todos os enderecos
-    public List<Endereco> listarTodos(){
+
+    // Buscar todos os endereços
+    public List<Endereco> listarTodos() {
         return enderecoRepository.findAll();
     }
-    
-    //Buscar um endereço por ID
-    public Optional<Endereco> buscarPorId(Long id){
+
+    // Buscar um endereço por ID
+    public Optional<Endereco> buscarPorId(Long id) {
         return enderecoRepository.findById(id);
     }
-    
-    //Deletar um endereço por ID
+
+    // Deletar um endereço por ID
     public void deletarPorId(Long id) {
         enderecoRepository.deleteById(id);
     }
